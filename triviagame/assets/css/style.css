@@ -1,0 +1,62 @@
+body{
+	background-color: rgba(0, 0, 0, 0.97);
+
+}
+button{
+	background-color: white;
+	border: none;
+	text-decoration: none;
+	font-size: 15px;
+}
+button:hover{
+	background-color: #e6cf4c;
+}
+#container{
+	width: 960px;
+	height: 540px;
+	margin-top: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	border: solid 2px white;
+	background-image: url(../images/background.jpg);
+	border-radius: 15px;
+}
+#header{
+	margin-top: 300px;
+	margin-left: 242px;
+	font-size: 25px;
+}
+/*CSS FOR GAME PAGE*/
+#container2{
+	width: 960px;
+	height: 540px;
+	margin-top: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	border: solid 2px white;
+	background-color: rgba(66, 133, 0, 0.63);
+	border-radius: 15px;
+	overflow: auto;
+}
+#question{
+	width: 960px;
+	padding-top: 20px;
+	margin-bottom: 150px;
+	text-align: center;
+	font-family: 'Inconsolata', ;
+	font-size: 25px;
+	color: #fffc33;
+}
+.answers button{
+	width: 240px;
+	height: 160px;
+	font-size: 32px;
+	line-height: 1em;
+	font-family: 'Slabo 27px', serif;
+	float: left;
+	border-right: solid 1px black;
+	background-color: #ff2424;
+}
+.answers button:hover{
+	background-color: #4ee44e;
+}

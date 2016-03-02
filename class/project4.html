@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="display">00:00</div>
+    <div id="buttons">
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+      <button id="reset">Reset</button>
+      <button id="lap">Lap</button>
+    </div>
+    <div id="laps"></div>
+  </div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  <script type="text/javascript">
+    
+    window.onload = function(){
+  //click events are done for you:
+  $('#lap').click(stopwatch.recordLap);
+  $('#stop').click(stopwatch.stop);
+  $('#reset').click(stopwatch.reset);
+  $('#start').click(stopwatch.start);
+};
+​
+var stopWatch = {
+  time:0,
+  lap:1,
+  reset:function(){
+    stopwatch.time = 0;
+    stopwatch.lap = 1;
+    $("#display").html("00:00");
+    $("laps").html("");
+    //change the "display" div to "00:00"
+​
+    //empty the "laps" div
+  },
+  start: function(){
+    //Use setInterval to start the count here
+    counter = setInterval(stopwatch.count, 1000);
+​
+​
+  },
+  stop: function(){
+    //Use clearInterval to stop the count here
+    clearInterval(counter);
+​
+​
+  },
+  recordLap: function(){
+    //Get the current time, pass that into the stopwatch.timeConverter function, and save the result in a variable
+​
+    //Add the current lap and time to the "laps" div
+​
+    //increment lap by 1, remember we cant use "this" here
+    var converted = stopWatch.timeConverter(stopWatch.time);
+    $("laps").append("<pLap" + stopWatch.lap + ":" + converted + "</p>");
+    stopWatch.lap++;
+​
+  },
+  count: function(){
+    //increment time by 1, remember we cant use "this" here
+​
+    //Get the current time, pass that into the stopwatch.timeConverter function, and save the result in a variable
+​
+    //Use the variable you just created to show the converted time in the "display" div
+  },
+  timeConverter: function(t){
+    //This function is done. You do not need to touch it. It takes the current time in seconds and converts it to minutes and seconds (mm:ss).
+    var minutes = Math.floor(t/60);
+    var seconds = t - (minutes * 60);
+    if (seconds < 10){
+      seconds = "0" + seconds;
+    }
+    if (minutes === 0){
+      minutes = "00";
+    } else if (minutes < 10){
+      minutes = "0" + minutes;
+    }
+    return minutes + ":" + seconds;
+  }
+};
+
+
+  </script>
+</body>
+
+</html>
