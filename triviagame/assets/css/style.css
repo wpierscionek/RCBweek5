@@ -60,3 +60,38 @@ button:hover{
 .answers button:hover{
 	background-color: #4ee44e;
 }
+#container3{
+	width: 960px;
+	height: 540px;
+	margin-top: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	border: solid 2px white;
+	background-image: url(../images/gamebackground.jpg);
+	border-radius: 15px;
+	overflow: auto;
+}
+#correct{
+	margin-top: 80px;
+	font-size: 50px;
+	font-family: 'Inconsolata', ;
+	color: #000;
+	text-align: center;
+	font-weight: 700;
+}
+#wrong{
+	margin-top: 250px;
+	font-size: 50px;
+	font-family: 'Inconsolata', ;
+	color: #000;
+	text-align: center;
+	font-weight: 700;
+}
+#container3 button{
+	width: 200px;
+	font-size: 32px;
+	text-align: center;
+	margin-top: 20px;
+	margin-right: 20px;
+	float: right;
+}
